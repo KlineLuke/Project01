@@ -5,6 +5,7 @@
  * Created on February 8, 2018, 2:31 PM
  */
 
+/* JUST COPIED THIS FROM OTHER HWK AS A PLACEHOLDER FOR NOW*/
 #ifndef BINARYSEARCH_H
 #define	BINARYSEARCH_H
 

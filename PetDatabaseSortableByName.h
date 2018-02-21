@@ -18,16 +18,12 @@ class PetDatabaseSortableByName: public PetDatabaseSortable {
         vector<Pet*> m_PetVector;
         string query;
     public:
-        PetDatabaseSortableByName( vector<Pet*> pets ): m_PetVector(pets) {}
+        PetDatabaseSortableByName( vector<Pet*> pets) : PetDatabaseSortable(pets) {}
         virtual bool smaller(int i, int j) const {
             if(getPet(i)->getName() < getPet(j)->getName())
                 return true;
             else
                 return false;
-        }
-        virtual void DisplayRecords() const {
-            for(int i=0; i<m_PetVector.size(); i++)
-                m_PetVector[i]->print();
         }
   
 };

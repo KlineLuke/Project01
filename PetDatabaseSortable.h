@@ -35,9 +35,8 @@ public:
     }
     
     virtual void DisplayRecords() const {
-        for(int i=0; i<getSize(); i++) {
+        for(int i=0; i<m_PetVector.size(); i++)
             m_PetVector[i]->print();
-        }
     }
     
     Pet* getPet(int i) const{

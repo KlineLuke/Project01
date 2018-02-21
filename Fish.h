@@ -9,6 +9,8 @@
 #define	FISH_H
 
 #include <string>
+#include <iomanip>
+#include <iostream>
 using namespace std;
 
 #include "Pet.h"
@@ -20,7 +22,7 @@ public:
     Fish() {
         watertype = "";
     }
-    Fish( string n, string t, int w, float p, string wt) : Pet(n, t, w, p), watertype(wt) {}
+    Fish( string n, string t, float p, int w, string wt) : Pet(n, t, p, w), watertype(wt) {}
     virtual ~Fish() {}
     Fish(const Fish& f){
         if(this != &f){
@@ -31,7 +33,7 @@ public:
             watertype = f.watertype;
         }
     }
-    Fish& operator=(const Fish& f){
+    virtual Fish& operator=(const Fish& f){
         if (this != &f) {
             name = f.name;
             type = f.type;
@@ -40,6 +42,16 @@ public:
             watertype = f.watertype;
         }
         return *this;
+    }
+    
+    string getWatertype() {
+        return watertype;
+    }
+    virtual void print() const {
+        cout<<setw(8)<<left<<"Name:"<<setw(8)<<left<<name<<setw(8)<<left<<"Type:";
+        cout<<setw(10)<<left<<type<<setw(10)<<left<<"Weight:"<<setw(4)<<left<<weight;
+        cout<<setw(10)<<left<<"Price:"<<setw(8)<<setprecision(2)<<fixed<<left<<price;
+        cout<<setw(12)<<left<<"WaterType:"<<setw(8)<<left<<watertype<<endl;
     }
 };
 

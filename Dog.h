@@ -11,6 +11,8 @@
 #include "Pet.h"
 
 #include <string>
+#include <iomanip>
+#include <iostream>
 using namespace std;
 
 class Dog: public Pet {
@@ -20,7 +22,7 @@ public:
     Dog() {
         category = "";
     }
-    Dog( string n, string t, int w, float p, string c) : Pet(n, t, w, p), category(c) {}
+    Dog( string n, string t, float p, int w, string c) : Pet(n, t, p, w), category(c) {}
     virtual ~Dog() {}
     Dog(const Dog& d){
         if(this != &d){
@@ -31,7 +33,7 @@ public:
             category = d.category;
         }
     }
-    Dog& operator=(const Dog& d){
+    virtual Dog& operator=(const Dog& d){
         if (this != &d) {
             name = d.name;
             type = d.type;
@@ -40,6 +42,16 @@ public:
             category = d.category;
         }
         return *this;
+    }
+    
+    string getCategory() {
+        return category;
+    }
+    virtual void print() const {
+        cout<<setw(8)<<left<<"Name:"<<setw(8)<<left<<name<<setw(8)<<left<<"Type:";
+        cout<<setw(10)<<left<<type<<setw(10)<<left<<"Weight:"<<setw(4)<<left<<weight;
+        cout<<setw(10)<<left<<"Price:"<<setw(8)<<setprecision(2)<<fixed<<left<<price;
+        cout<<setw(12)<<left<<"Category:"<<setw(8)<<left<<category<<endl;
     }
 };
 

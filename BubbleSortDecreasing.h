@@ -2,9 +2,9 @@
  * File:   BubbleSortDecreasing.h
  * Author: klineluk
  *
- * Created on February 12, 2018, 4:05 PM
+ * Created on February 21, 2018, 11:20 AM
  */
-/* JUST COPIED THIS FROM OTHER HWK AS A PLACEHOLDER FOR NOW*/
+
 #ifndef BUBBLESORTDECREASING_H
 #define	BUBBLESORTDECREASING_H
 
@@ -12,7 +12,7 @@
 
 class BubbleSortDecreasing: public BubbleSort{
 public:
-    virtual bool needSwap(SortableVector* sortableVector, int i, int j) const{
+    virtual bool needSwap(PetDatabaseSortable* sortableVector, int i, int j) const{
         if(sortableVector->smaller(i,j)){
             return true;
         }

@@ -9,6 +9,7 @@
 #define	PET_H
 
 #include <string>
+#include <iostream>
 using namespace std;
 
 class Pet{
@@ -24,7 +25,7 @@ public:
         weight = 0;
         price = 0.0;
     }
-    Pet( string n, string t, int w, float p) : name(n), type(t), weight(w), price(p) {}
+    Pet( string n, string t, float p, int w) : name(n), type(t), price(p), weight(w) {}
     virtual ~Pet() {}
     Pet(const Pet& pet){
         if(this != &pet){
@@ -34,7 +35,7 @@ public:
             price = pet.price;
         }
     }
-    Pet& operator=(const Pet& pet){
+    virtual Pet& operator=(const Pet& pet){
         if (this != &pet) {
             name = pet.name;
             type = pet.type;
@@ -43,6 +44,23 @@ public:
         }
         return *this;
     }
+    string getName() {
+        return name;
+    }
+    string getType() {
+        return type;
+    }
+    int getWeight() {
+        return weight;
+    }
+    float getPrice() {
+        return price;
+    }
+    
+    virtual void print() const {
+        cout << "STUFF" << endl;
+    }
 };
 
 #endif	/* PET_H */
+

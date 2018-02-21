@@ -2,19 +2,19 @@
  * File:   BubbleSort.h
  * Author: klineluk
  *
- * Created on February 12, 2018, 4:17 PM
+ * Created on February 21, 2018, 11:21 AM
  */
-/* JUST COPIED THIS FROM OTHER HWK AS A PLACEHOLDER FOR NOW*/
+
 #ifndef BUBBLESORT_H
 #define	BUBBLESORT_H
 
-#include "SortableVector.h"
+#include "PetDatabaseSortable.h"
 
 class BubbleSort{
 public:
-    virtual bool needSwap(SortableVector* sortableVector, int i, int j) const = 0;
+    virtual bool needSwap(PetDatabaseSortable* sortableVector, int i, int j) const = 0;
     
-    void sort(SortableVector* sortableVector){
+    void sort(PetDatabaseSortable* sortableVector){
         bool sorted = false;
         int n=sortableVector->getSize();
         while( !sorted ){
@@ -29,6 +29,7 @@ public:
         }
     }
 };
+
 
 #endif	/* BUBBLESORT_H */
 

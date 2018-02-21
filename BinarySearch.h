@@ -2,18 +2,17 @@
  * File:   BinarySearch.h
  * Author: klineluk
  *
- * Created on February 8, 2018, 2:31 PM
+ * Created on February 17, 2018, 12:14 PM
  */
 
-/* JUST COPIED THIS FROM OTHER HWK AS A PLACEHOLDER FOR NOW*/
 #ifndef BINARYSEARCH_H
 #define	BINARYSEARCH_H
 
-#include "SearchableVector.h"
+#include "PetDatabaseSearchable.h"
 
 class BinarySearch {
 public:
-    int search(SearchableVector* vec) {
+    int search(PetDatabaseSearchable* vec) {
         int left = 0;
         int right = vec->getSize();
         
@@ -33,3 +32,4 @@ public:
 
 
 #endif	/* BINARYSEARCH_H */
+

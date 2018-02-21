@@ -36,7 +36,6 @@ public:
     
     virtual void DisplayRecords() const {
         for(int i=0; i<getSize(); i++) {
-            //cout << "HELLO" << endl;
             m_PetVector[i]->print();
         }
     }

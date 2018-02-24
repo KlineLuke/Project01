@@ -14,8 +14,6 @@
 #include "PetDatabaseSortable.h"
 
 class PetDatabaseSortableByName: public PetDatabaseSortable {
-    protected:
-        vector<Pet*> m_PetVector;
     public:
         // constructor 
         PetDatabaseSortableByName( vector<Pet*> pets) : PetDatabaseSortable(pets) {}

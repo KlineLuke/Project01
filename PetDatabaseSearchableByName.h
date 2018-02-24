@@ -16,7 +16,6 @@
 
 class PetDatabaseSearchableByName: public PetDatabaseSearchable {
     protected:
-        vector<Pet*> m_PetVector;
         string query;
     public:
         // constructor

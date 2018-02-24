@@ -19,24 +19,30 @@ protected:
     int weight;
     float price;
 public:
-    Pet() {
+    Pet() // default Constructor
+    {
         name = "";
         type = "";
         weight = 0;
         price = 0.0;
     }
+    // constructor
     Pet( string n, string t, float p, int w) : name(n), type(t), price(p), weight(w) {}
-    virtual ~Pet() {}
-    Pet(const Pet& pet){
-        if(this != &pet){
+    virtual ~Pet() {}       // destructor
+    Pet(const Pet& pet)     // copy constructor
+    {
+        if(this != &pet)
+        {
             name = pet.name;
             type = pet.type;
             weight = pet.weight;            
             price = pet.price;
         }
     }
-    virtual Pet& operator=(const Pet& pet){
-        if (this != &pet) {
+    virtual Pet& operator=(const Pet& pet) // assignment constructor
+    {
+        if (this != &pet) 
+        {
             name = pet.name;
             type = pet.type;
             weight = pet.weight;            
@@ -44,22 +50,24 @@ public:
         }
         return *this;
     }
-    string getName() {
+    string getName()
+    {
         return name;
     }
-    string getType() {
+    string getType() 
+    {
         return type;
     }
-    int getWeight() {
+    int getWeight() 
+    {
         return weight;
     }
-    float getPrice() {
+    float getPrice() 
+    {
         return price;
     }
     
-    virtual void print() const {
-        cout << "STUFF" << endl;
-    }
+    virtual void print() const = 0;
 };
 
 #endif	/* PET_H */

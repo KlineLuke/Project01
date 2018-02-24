@@ -1,6 +1,6 @@
 /* 
  * File:   PetDatabaseSortableByWeight.h
- * Author: opperm27
+ * Author: opperm27/klineluk
  *
  * Created on February 23, 2018, 7:23 AM
  */
@@ -20,13 +20,13 @@ class PetDatabaseSortableByWeight: public PetDatabaseSortable
         string query;
     public:
         PetDatabaseSortableByWeight( vector<Pet*> pets) : PetDatabaseSortable(pets) {}
-        virtual bool smaller(int i, int j) const {
+        virtual bool smaller(int i, int j) const 
+        {
             if(getPet(i)->getWeight() < getPet(j)->getWeight())
-                return true;
+                return true; // true if pet i's weight < pet j's weight
             else
                 return false;
         }
 };
 
 #endif	/* PETDATABASESORTABLEBYWEIGHT_H */
-

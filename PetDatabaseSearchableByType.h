@@ -16,7 +16,6 @@
 
 class PetDatabaseSearchableByType: public PetDatabaseSearchable {
     protected:
-        vector<Pet*> m_PetVector;
         string query;
     public:
         PetDatabaseSearchableByType( PetDatabaseSortableByType* pets) : PetDatabaseSearchable(pets->getVector()) {}

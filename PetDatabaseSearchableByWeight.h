@@ -16,7 +16,6 @@
 
 class PetDatabaseSearchableByWeight: public PetDatabaseSearchable {
     protected:
-        vector<Pet*> m_PetVector;
         unsigned int query;
     public:
         PetDatabaseSearchableByWeight( PetDatabaseSortableByWeight* pets) : PetDatabaseSearchable(pets->getVector()) {}

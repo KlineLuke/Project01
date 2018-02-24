@@ -17,7 +17,6 @@ class PetDatabaseSortableByType: public PetDatabaseSortable
 {
     protected:
         vector<Pet*> m_PetVector;
-        string query;
     public:
         PetDatabaseSortableByType( vector<Pet*> pets) : PetDatabaseSortable(pets) {}
         virtual bool smaller(int i, int j) const 

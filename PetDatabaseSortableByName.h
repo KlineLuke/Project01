@@ -16,7 +16,6 @@
 class PetDatabaseSortableByName: public PetDatabaseSortable {
     protected:
         vector<Pet*> m_PetVector;
-        string query;
     public:
         // constructor 
         PetDatabaseSortableByName( vector<Pet*> pets) : PetDatabaseSortable(pets) {}

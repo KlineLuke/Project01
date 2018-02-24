@@ -1,6 +1,6 @@
 /* 
  * File:   PetDatabaseSearchableByWeight.h
- * Author: opperm27
+ * Author: opperm27/klineluk
  *
  * Created on February 24, 2018, 1:38 PM
  */
@@ -20,9 +20,10 @@ class PetDatabaseSearchableByWeight: public PetDatabaseSearchable {
         int query;
     public:
         PetDatabaseSearchableByWeight( PetDatabaseSortableByWeight* pets) : PetDatabaseSearchable(pets->getVector()) {}
-        virtual int CompareAt(int i) const {
+        virtual int CompareAt(int i) const 
+        {
             if(getPet(i)->getWeight() == query)
-                return 0;
+                return 0;   // query found
             else if(getPet(i)->getWeight() > query)
                 return 1;
             else if(getPet(i)->getWeight() < query)
@@ -36,4 +37,3 @@ class PetDatabaseSearchableByWeight: public PetDatabaseSearchable {
 };
 
 #endif	/* PETDATABASESEARCHABLEBYWEIGHT_H */
-

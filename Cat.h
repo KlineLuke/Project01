@@ -19,13 +19,17 @@ class Cat: public Pet {
 protected:
     bool fluffy;
 public:    
-    Cat() {
+    Cat() // default constructor
+    {
         fluffy = false;
     }
+    // constructor
     Cat( string n, string t, float p, int w, bool f) : Pet(n, t, p, w), fluffy(f) {}
-    virtual ~Cat() {}
-    Cat(const Cat& c){
-        if(this != &c){
+    virtual ~Cat() {}   // destructor
+    Cat(const Cat& c)   // copy constructor 
+    {
+        if(this != &c)
+        {
             name = c.name;
             type = c.type;
             weight = c.weight;            
@@ -33,8 +37,10 @@ public:
             fluffy = c.fluffy;
         }
     }
-    virtual Cat& operator=(const Cat& c){
-        if (this != &c) {
+    virtual Cat& operator=(const Cat& c) // assignment constructor
+    {
+        if (this != &c) 
+        {
             name = c.name;
             type = c.type;
             weight = c.weight;            
@@ -44,10 +50,12 @@ public:
         return *this;
     }
     
-    bool getFluffy() {
+    bool getFluffy() 
+    {
         return fluffy;
     }
-    virtual void print() const {
+    virtual void print() const // prints everything about pet
+    {
         cout<<setw(8)<<left<<"Name:"<<setw(8)<<left<<name<<setw(8)<<left<<"Type:";
         cout<<setw(10)<<left<<type<<setw(10)<<left<<"Weight:"<<setw(4)<<weight;
         cout<<setw(10)<<left<<"Price:"<<setw(8)<<setprecision(2)<<fixed<<left<<price;

@@ -46,6 +46,11 @@ public:
     void insert(Pet* element) {
         m_PetVector.push_back(element);
     }
+    
+    vector<Pet*> getVector() const
+    {
+        return m_PetVector;
+    }
 };
 
 

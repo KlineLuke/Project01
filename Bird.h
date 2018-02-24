@@ -50,7 +50,7 @@ public:
         return *this;
     }
     
-    bool getNocturnal() 
+    bool getNocturnal() const
     {
         return nocturnal;
     }

@@ -1,6 +1,6 @@
 /* 
  * File:   PetDatabaseSortableByType.h
- * Author: opperm27
+ * Author: opperm27/klineluk
  *
  * Created on February 23, 2018, 12:01 AM
  */
@@ -20,13 +20,13 @@ class PetDatabaseSortableByType: public PetDatabaseSortable
         string query;
     public:
         PetDatabaseSortableByType( vector<Pet*> pets) : PetDatabaseSortable(pets) {}
-        virtual bool smaller(int i, int j) const {
+        virtual bool smaller(int i, int j) const 
+        {
             if(getPet(i)->getType() < getPet(j)->getType())
-                return true;
+                return true; // true if pet i's type < pet j's type
             else
                 return false;
         }
 };
 
 #endif	/* PETDATABASESORTABLEBYTYPE_H */
-

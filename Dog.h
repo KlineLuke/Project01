@@ -24,7 +24,7 @@ public:
         category = "";
     }
     // constructor 
-    Dog( string n, string t, float p, int w, string c) : Pet(n, t, p, w), category(c) {}
+    Dog( string n, string t, double p, unsigned int w, string c) : Pet(n, t, p, w), category(c) {}
     virtual ~Dog() {}   // destructor 
     Dog(const Dog& d)   // copy constructor
     {

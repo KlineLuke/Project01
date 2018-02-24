@@ -16,8 +16,8 @@ class Pet{
 protected:
     string name;
     string type;
-    int weight;
-    float price;
+    unsigned int weight;
+    double price;
 public:
     Pet() // default Constructor
     {
@@ -27,7 +27,7 @@ public:
         price = 0.0;
     }
     // constructor
-    Pet( string n, string t, float p, int w) : name(n), type(t), price(p), weight(w) {}
+    Pet( string n, string t, double p, unsigned int w) : name(n), type(t), price(p), weight(w) {}
     virtual ~Pet() {}       // destructor
     Pet(const Pet& pet)     // copy constructor
     {
@@ -58,11 +58,11 @@ public:
     {
         return type;
     }
-    int getWeight() const
+    unsigned int getWeight() const
     {
         return weight;
     }
-    float getPrice() const
+    double getPrice() const
     {
         return price;
     }

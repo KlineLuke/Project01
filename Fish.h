@@ -19,13 +19,17 @@ class Fish: public Pet {
 protected:
     string watertype;
 public:    
-    Fish() {
+    Fish() // default constructor
+    {
         watertype = "";
     }
+    // constructor 
     Fish( string n, string t, float p, int w, string wt) : Pet(n, t, p, w), watertype(wt) {}
-    virtual ~Fish() {}
-    Fish(const Fish& f){
-        if(this != &f){
+    virtual ~Fish() {}      // destructor 
+    Fish(const Fish& f)     // copy constructor 
+    {    
+        if(this != &f)
+        {
             name = f.name;
             type = f.type;
             weight = f.weight;            
@@ -33,8 +37,10 @@ public:
             watertype = f.watertype;
         }
     }
-    virtual Fish& operator=(const Fish& f){
-        if (this != &f) {
+    virtual Fish& operator=(const Fish& f)  // assignment constructor
+    {
+        if (this != &f) 
+        {
             name = f.name;
             type = f.type;
             weight = f.weight;            
@@ -44,10 +50,12 @@ public:
         return *this;
     }
     
-    string getWatertype() {
+    string getWatertype() 
+    {
         return watertype;
     }
-    virtual void print() const {
+    virtual void print() const // prints everything about pet 
+    {
         cout<<setw(8)<<left<<"Name:"<<setw(8)<<left<<name<<setw(8)<<left<<"Type:";
         cout<<setw(10)<<left<<type<<setw(10)<<left<<"Weight:"<<setw(4)<<left<<weight;
         cout<<setw(10)<<left<<"Price:"<<setw(8)<<setprecision(2)<<fixed<<left<<price;

@@ -1,6 +1,6 @@
 /* 
  * File:   PetDatabaseSortableByName.h
- * Author: klineluk
+ * Author: opperm27/klineluk
  *
  * Created on February 21, 2018, 11:00 AM
  */
@@ -18,14 +18,15 @@ class PetDatabaseSortableByName: public PetDatabaseSortable {
         vector<Pet*> m_PetVector;
         string query;
     public:
+        // constructor 
         PetDatabaseSortableByName( vector<Pet*> pets) : PetDatabaseSortable(pets) {}
-        virtual bool smaller(int i, int j) const {
+        virtual bool smaller(int i, int j) const 
+        {
             if(getPet(i)->getName() < getPet(j)->getName())
-                return true;
+                return true;    // true if pet i's name < pet j's name
             else
                 return false;
-        }
-  
+        }  
 };
 
 

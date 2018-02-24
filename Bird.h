@@ -24,7 +24,7 @@ public:
         nocturnal = false;
     }
     // constructor
-    Bird( string n, string t, float p, int w, bool nt) : Pet(n, t, p, w), nocturnal(nt) {}
+    Bird( string n, string t, double p, unsigned int w, bool nt) : Pet(n, t, p, w), nocturnal(nt) {}
     virtual ~Bird() {}  // destructor
     Bird(const Bird& b) // shape constructor
     {

@@ -13,8 +13,9 @@
 class BubbleSortIncreasing: public BubbleSort{
 public:
     virtual bool needSwap(PetDatabaseSortable* sortableVector, int i, int j) const{
-        if(sortableVector->smaller(i,j)){
-            return true;
+        if(sortableVector->smaller(i,j))
+        {
+            return true;    // if pet i is smaller than pet j
         }
         return false;
     }

@@ -1,6 +1,6 @@
 /* 
  * File:   BinarySearch.h
- * Author: klineluk
+ * Author: opperm27/klineluk
  *
  * Created on February 17, 2018, 12:14 PM
  */

@@ -13,7 +13,8 @@
 
 class BinarySearch {
 public:
-    int search(PetDatabaseSearchable* vec) {
+    int search(PetDatabaseSearchable* vec) const
+    {
         int left = 0;
         int right = vec->getSize();
 

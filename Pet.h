@@ -1,6 +1,6 @@
 /* 
  * File:   Pet.h
- * Author: opperm27/klineluk
+ * Author: klineluk
  *
  * Created on February 17, 2018, 11:27 AM
  */
@@ -50,19 +50,19 @@ public:
         }
         return *this;
     }
-    string getName()
+    string getName() const
     {
         return name;
     }
-    string getType() 
+    string getType() const
     {
         return type;
     }
-    int getWeight() 
+    int getWeight() const
     {
         return weight;
     }
-    float getPrice() 
+    float getPrice() const
     {
         return price;
     }

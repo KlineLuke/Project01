@@ -17,7 +17,7 @@
 class PetDatabaseSearchableByPrice: public PetDatabaseSearchable {
     protected:
         vector<Pet*> m_PetVector;
-        float query;
+        double query;
     public:
         // constructor 
         PetDatabaseSearchableByPrice( PetDatabaseSortableByPrice* pets) : PetDatabaseSearchable(pets->getVector()) {}
@@ -31,7 +31,7 @@ class PetDatabaseSearchableByPrice: public PetDatabaseSearchable {
                 return 2;
         }
         
-        void setQuery(float i)
+        void setQuery(double i)
         {
             query = i;
         }

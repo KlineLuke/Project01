@@ -8,7 +8,6 @@
 #ifndef BINARYSEARCH_H
 #define	BINARYSEARCH_H
 
-//#include "PetDatabaseSortable.h"
 #include "PetDatabaseSearchable.h"
 
 class BinarySearch {

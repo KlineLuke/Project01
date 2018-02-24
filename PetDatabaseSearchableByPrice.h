@@ -1,6 +1,6 @@
 /* 
  * File:   PetDatabaseSearchableByPrice.h
- * Author: opperm27
+ * Author: opperm27/klineluk
  *
  * Created on February 24, 2018, 1:33 PM
  */
@@ -19,10 +19,12 @@ class PetDatabaseSearchableByPrice: public PetDatabaseSearchable {
         vector<Pet*> m_PetVector;
         float query;
     public:
+        // constructor 
         PetDatabaseSearchableByPrice( PetDatabaseSortableByPrice* pets) : PetDatabaseSearchable(pets->getVector()) {}
-        virtual int CompareAt(int i) const {
+        virtual int CompareAt(int i) const 
+        {
             if(getPet(i)->getPrice() == query)
-                return 0;
+                return 0;   // query found
             else if(getPet(i)->getPrice() > query)
                 return 1;
             else if(getPet(i)->getPrice() < query)
@@ -36,4 +38,3 @@ class PetDatabaseSearchableByPrice: public PetDatabaseSearchable {
 };
 
 #endif	/* PETDATABASESEARCHABLEBYPRICE_H */
-

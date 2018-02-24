@@ -1,6 +1,6 @@
 /* 
  * File:   Fish.h
- * Author: klineluk
+ * Author: Author: opperm27/klineluk
  *
  * Created on February 17, 2018, 11:27 AM
  */

@@ -1,39 +1,40 @@
 /* 
- * File:   PetDatabaseSearchableByWeight.h
+ * File:   PetDatabaseSearchableByPrice.h
  * Author: opperm27/klineluk
  *
- * Created on February 24, 2018, 1:38 PM
+ * Created on February 24, 2018, 1:33 PM
  */
 
-#ifndef PETDATABASESEARCHABLEBYWEIGHT_H
-#define	PETDATABASESEARCHABLEBYWEIGHT_H
+#ifndef PETDATABASESEARCHABLEBYPRICE_H
+#define	PETDATABASESEARCHABLEBYPRICE_H
 
 #include <vector>
 #include <iostream>
 #include "Pet.h"
-#include "PetDatabaseSortableByWeight.h"
+#include "PetDatabaseSortableByPrice.h"
 #include "PetDatabaseSearchable.h"
 
-class PetDatabaseSearchableByWeight: public PetDatabaseSearchable {
+class PetDatabaseSearchableByPrice: public PetDatabaseSearchable {
     protected:
         vector<Pet*> m_PetVector;
-        int query;
+        double query;
     public:
-        PetDatabaseSearchableByWeight( PetDatabaseSortableByWeight* pets) : PetDatabaseSearchable(pets->getVector()) {}
+        // constructor 
+        PetDatabaseSearchableByPrice( PetDatabaseSortableByPrice* pets) : PetDatabaseSearchable(pets->getVector()) {}
         virtual int CompareAt(int i) const 
         {
-            if(getPet(i)->getWeight() == query)
+            if(getPet(i)->getPrice() == query)
                 return 0;   // query found
-            else if(getPet(i)->getWeight() > query)
+            else if(getPet(i)->getPrice() > query)
                 return 1;
-            else if(getPet(i)->getWeight() < query)
+            else if(getPet(i)->getPrice() < query)
                 return 2;
         }
         
-        void setQuery(int i)
+        void setQuery(double i)
         {
             query = i;
         }
 };
 
-#endif	/* PETDATABASESEARCHABLEBYWEIGHT_H */
+#endif	/* PETDATABASESEARCHABLEBYPRICE_H */

@@ -1,6 +1,6 @@
 /* 
  * File:   BubbleSortDecreasing.h
- * Author: klineluk
+ * Author: opperm27/klineluk
  *
  * Created on February 21, 2018, 11:20 AM
  */

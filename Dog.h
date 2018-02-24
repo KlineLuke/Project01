@@ -1,6 +1,6 @@
 /* 
  * File:   Dog.h
- * Author: opperm27/klineluk
+ * Author: klineluk
  *
  * Created on February 17, 2018, 11:27 AM
  */
@@ -50,7 +50,7 @@ public:
         return *this;
     }
     
-    string getCategory() 
+    string getCategory() const
     {
         return category;
     }

@@ -24,7 +24,7 @@ public:
         fluffy = false;
     }
     // constructor
-    Cat( string n, string t, float p, int w, bool f) : Pet(n, t, p, w), fluffy(f) {}
+    Cat( string n, string t, double p, unsigned int w, bool f) : Pet(n, t, p, w), fluffy(f) {}
     virtual ~Cat() {}   // destructor
     Cat(const Cat& c)   // copy constructor 
     {

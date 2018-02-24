@@ -24,7 +24,7 @@ public:
         watertype = "";
     }
     // constructor 
-    Fish( string n, string t, float p, int w, string wt) : Pet(n, t, p, w), watertype(wt) {}
+    Fish( string n, string t, double p, unsigned int w, string wt) : Pet(n, t, p, w), watertype(wt) {}
     virtual ~Fish() {}      // destructor 
     Fish(const Fish& f)     // copy constructor 
     {    

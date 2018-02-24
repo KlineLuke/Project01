@@ -19,7 +19,7 @@ class PetDatabaseSearchableByName: public PetDatabaseSearchable {
         vector<Pet*> m_PetVector;
         string query;
     public:
-        PetDatabaseSearchableByName( PetDatabaseSortableByName* pets) : PetDatabaseSearchable(pets) {}
+        PetDatabaseSearchableByName( PetDatabaseSortableByName* pets) : PetDatabaseSearchable(pets->getVector()) {}
         virtual int CompareAt(int i) const {
             if(getPet(i)->getName() == query)
                 return 0;

@@ -14,7 +14,7 @@ class BubbleSort{
 public:
     virtual bool needSwap(PetDatabaseSortable* sortableVector, int i, int j) const = 0;
     
-    void sort(PetDatabaseSortable* sortableVector)
+    void sort(PetDatabaseSortable* sortableVector) const
     {
         bool sorted = false;
         int n=sortableVector->getSize();
